@@ -64,4 +64,17 @@ public static WebDriver driver;
 
 		}
 		
+		@Test
+		public void test3() {
+			System.out.println("Test1--->Buisness Logic");
+			WebElement txtUserName = driver.findElement(By.id("email"));
+			txtUserName.sendKeys("Welcome96");
+			Assert.assertEquals("Username value is not matched", "Welcome96", txtUserName.getAttribute("value"));
+			WebElement txtPass = driver.findElement(By.id("pass"));
+			txtPass.sendKeys("1234567");
+			Assert.assertEquals("Password value is not matched", "1234567", txtPass.getAttribute("value"));
+			
+
+		}
+		
 	}
